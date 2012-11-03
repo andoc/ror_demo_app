@@ -1,6 +1,9 @@
 DemoApp::Application.routes.draw do
-  get "users/new"
 
+  resources :microposts
+
+  resources :users
+  
   root to: 'static_pages#home'
   match '/signup',  to: 'users#new'
   match '/help',    to: 'static_pages#help'
@@ -8,9 +11,6 @@ DemoApp::Application.routes.draw do
   match '/contact', to: 'static_pages#contact'
 
 
-  resources :microposts
-
-  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
