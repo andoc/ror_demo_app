@@ -34,4 +34,3 @@ group :production do
 end
 
 gem 'annotate', '2.5.0', group: :development
-gem "win32console", "~> 1.3.2"
