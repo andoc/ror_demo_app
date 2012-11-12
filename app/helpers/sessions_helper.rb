@@ -4,7 +4,11 @@ module SessionsHelper
     cookies.permanent[:remember_token] = user.remember_token
     self.current_user = user
   end
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> old-state
   def signed_in?
     !current_user.nil?
   end

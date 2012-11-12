@@ -4,7 +4,19 @@ describe "Authentication" do
 
   subject { page }
 
+<<<<<<< HEAD
   describe "signin" do
+=======
+  describe "signin page" do
+    before { visit signin_path }
+
+    it { should have_selector('h1',    text: 'Sign in') }
+    it { should have_selector('title', text: 'Sign in') }
+  end
+  
+  describe "signin" do
+
+>>>>>>> old-state
     before { visit signin_path }
 
     describe "with invalid information" do
@@ -19,7 +31,11 @@ describe "Authentication" do
       end
     end
 	
+<<<<<<< HEAD
 	describe "with valid information" do
+=======
+    describe "with valid information" do
+>>>>>>> old-state
       let(:user) { FactoryGirl.create(:user) }
       before do
         fill_in "Email",    with: user.email
@@ -38,6 +54,12 @@ describe "Authentication" do
       end
 	  
     end
+<<<<<<< HEAD
 	
   end
 end
+=======
+  end
+  
+end
+>>>>>>> old-state
