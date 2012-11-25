@@ -1,10 +1,8 @@
 DemoApp::Application.routes.draw do
 
-  resources :microposts
-
   resources :users
-  
   resources :sessions, only: [:new, :create, :destroy]
+  resources :microposts, only: [:create, :destroy]
   
   root to: 'static_pages#home'
   match '/help',    to: 'static_pages#help'
